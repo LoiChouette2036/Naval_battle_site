@@ -1,0 +1,7 @@
+<h1>Profile of <%= @profile.name %></h1>
+<p>Mail: <%=@profile.user.email%></p>
+<p>Bio: <%= @profile.bio %></p>
+<p>Games Played: <%= @profile.played_game %></p>
+<p>Victories: <%= @profile.number_victory %></p>
+
+<%= link_to 'Edit Profile',edit_profile_path%>
