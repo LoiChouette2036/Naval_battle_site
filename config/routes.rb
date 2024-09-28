@@ -16,4 +16,6 @@ Rails.application.routes.draw do
     registrations: "users/registrations"
   }
   resources :profiles, only: [ :show, :edit, :update ]
+
+  resources :games, only: [ :show ]
 end
