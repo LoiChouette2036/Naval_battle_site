@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Ship.create([
+  { name: "Aircraft Carrier", length: 5, orientation: "horizontal", coordinates: "" },
+  { name: "Battleship", length: 4, orientation: "horizontal", coordinates: "" },
+  { name: "Destroyer", length: 3, orientation: "horizontal", coordinates: "" },
+  { name: "Submarine", length: 3, orientation: "horizontal", coordinates: "" },
+  { name: "Patrol Boat", length: 2, orientation: "horizontal", coordinates: "" }
+])

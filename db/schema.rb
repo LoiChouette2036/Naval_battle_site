@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_27_224418) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_28_044716) do
   create_table "boards", force: :cascade do |t|
     t.integer "game_id", null: false
     t.text "grid"
@@ -35,6 +35,17 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_27_224418) do
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
+  create_table "ships", force: :cascade do |t|
+    t.string "name"
+    t.integer "length"
+    t.string "orientation"
+    t.string "coordinates"
+    t.integer "game_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_ships_on_game_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -49,4 +60,5 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_27_224418) do
 
   add_foreign_key "boards", "games"
   add_foreign_key "profiles", "users"
+  add_foreign_key "ships", "games"
 end

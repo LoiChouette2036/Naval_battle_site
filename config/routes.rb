@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   }
   resources :profiles, only: [ :show, :edit, :update ]
 
-  resources :games, only: [ :show ]
+  resources :games, only: [ :new, :create, :show ]
 end
